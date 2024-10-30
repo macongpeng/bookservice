@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface AuthorRepository extends JpaRepository<Author, String> {
+public interface AuthorRepository extends JpaRepository<Author, Long> {
 
     // Find authors by name containing text (case insensitive)
     List<Author> findByNameContainingIgnoreCase(String name);
